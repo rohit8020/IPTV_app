@@ -1,0 +1,17 @@
+{
+  "name": "iptv-2",
+  "version": "1.0.0",
+  "description": "\"This is simple IPTV app\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "author": "Rohit Gangwar",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.12"
+  }
+}
