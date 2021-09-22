@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 *{
     margin: 0;
     padding: 0;
@@ -5,32 +6,39 @@
 }
 
 body{
-    background-color: rgb(107, 196, 166);
+    background-color: rgb(59, 59, 59);
 }
 
 nav{
-    font-size: 2rem;
-    color: rgb(49, 5, 5);
-    background-color: coral;
+    font-size: 1.7rem;
+    color: rgb(231, 231, 231);
+    background-color: rgb(15, 15, 14);
     width: 100%;
-    height: 70px;
+    height: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-bottom: 5px solid rgb(49, 5, 5);
+    font-family: 'Poppins', sans-serif;
+    border-bottom: 5px solid grey;
 }
 
 @media only screen and (max-width: 450px) {
     nav{
-        font-size: 1.6rem;
+        font-size: 1.4rem;
     }
 }
 
 .container{
     width: 100%;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
+    background-image: url("https://images.unsplash.com/photo-1515703817793-511cee221bb9?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=870&q=80");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
 }
 
 .hls-example-dimensions{
@@ -38,9 +46,29 @@ nav{
     height: 100%;
 }
 
+.video-js .vjs-big-play-button{
+    margin-top: 43px;
+    margin-left: 87px;
+}
+
 .video-container{
     margin-top: 2rem;
     width: 85%;
     height: 85vh;
-    background-color: gray;
+    display: flex;
+    border-left: 2px solid gray;
+    border-right: 2px solid gray;
+}
+
+@media only screen and (max-width: 720px) {
+    .video-container{
+        height: 60vh;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .video-container{
+        height: 50vh;
+        width: 90%;
+    }
 }

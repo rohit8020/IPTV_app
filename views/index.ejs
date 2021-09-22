@@ -10,10 +10,15 @@
 <body>
     <div class="container">
         <nav>© rohit8020(Rohit Gangwar)</nav>
-        <div class="channels-cotainer">
+        <h1 class="heading">Welcome to IPTV</h1>
+        <div class="channels-container">
             <% channels.forEach(function(channel,index){ %>
                 <div class="channel">
+                    <% if(channel.tvg_logo==="" || !channel.tvg_logo){ %>
+                        <img src="http://pngimg.com/uploads/tv/tv_PNG39244.png" alt="📺">
+                    <% }else{ %>    
                     <img src="<%= channel.tvg_logo %>" alt="📺">
+                    <% } %>
                     <a href="/<%= String(index) %>">
                         <span><b>Channel Name : <%= channel.tvg_id %></b></span>
                     </a>
