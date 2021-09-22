@@ -2259,12 +2259,20 @@ app.use(express.static(__dirname + "/public"));
 app.set("view engine", "ejs");
 
 app.get('/', (req, res) => {
-  res.render("index")
+  res.render("index", {channels: channels})
 })
 app.get('/:id',(req,res)=>{
-    const index=req.params.id
-    const data={videosrc: channels[index].vidsrc}
-    res.render("videoplayer",{data: data})
+    let index=req.params.id
+    let data
+    try{
+      data=channels[index]
+    }catch{
+      console.log("error!")
+    }finally{
+      if(data){
+        res.render("videoplayer",{data: data["vidsrc"]})
+      }
+    } 
 })
 
 app.listen(process.env.PORT,process.env.IP, () => {
