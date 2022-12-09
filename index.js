@@ -24,5 +24,5 @@ app.get('/:id',(req,res)=>{
 })
 
 app.listen(process.env.PORT,process.env.IP, () => {
-  console.log(`IPTV-SERVER STARTED!`)
+  console.log(`SERVER STARTED!`)
 })
