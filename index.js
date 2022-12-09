@@ -23,8 +23,6 @@ app.get('/:id',(req,res)=>{
     } 
 })
 
-const port=process.env.PORT||9001
-
-app.listen(port, () => {
+app.listen(9000, () => {
   console.log(`SERVER STARTED!`)
 })
